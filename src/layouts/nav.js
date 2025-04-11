@@ -49,7 +49,7 @@ export default function NavBar() {
           <nav className="hidden md:flex pl-2 lg:pl-0">
             <ul className="flex gap-5 lg:gap-10" ref={navRef}>
               <li>
-                <Link href="/#about" scroll={false} onClick={() => { handleSetActive('about'); closeMenubar(); }}>
+                <Link href="#about"  onClick={() => { handleSetActive('about'); closeMenubar(); }}>
                   About Us
                 </Link>
               </li>
@@ -64,7 +64,7 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <Link href="/#faq" scroll={false} onClick={() => { handleSetActive('faq'); closeMenubar(); }}>
+                <Link href="#faq"  onClick={() => { handleSetActive('faq'); closeMenubar(); }}>
                   FAQs
                 </Link>
               </li>
@@ -82,7 +82,7 @@ export default function NavBar() {
             }`}
           >
             <div className="flex flex-col gap-5" ref={navRef}>
-              <Link href="/#about" scroll={false} onClick={() => { handleSetActive('about'); closeMenubar(); }}>
+              <Link href="#about" onClick={() => { handleSetActive('about'); closeMenubar(); }}>
                 <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   About Us
                 </button>
@@ -97,7 +97,7 @@ export default function NavBar() {
                   Pricing
                 </button>
               </Link>
-              <Link href="/#faq" scroll={false} onClick={() => { handleSetActive('faq'); closeMenubar(); }}>
+              <Link href="#faq"  onClick={() => { handleSetActive('faq'); closeMenubar(); }}>
                 <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   FAQs
                 </button>

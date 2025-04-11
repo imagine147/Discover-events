@@ -15,12 +15,12 @@ export default function Home() {
     <div className="font-sans text-gray-800">
       <NavBar/>
       <div className="bg-[#F1F5F8]">
-        <Hero/>
-        <About/>
-        <Events/>
-        <WhyUs/>
-        <CustomersReview/>
-        <Faqs/>
+        <div id="home"><Hero/></div>
+        <div id="about"><About/></div>
+        <div id="events"><Events/></div>
+        <div id="why"><WhyUs/></div>
+        <div id="review"><CustomersReview/></div>
+        <div id="faq"><Faqs/></div>
       </div>
       <Footer/>
     </div>

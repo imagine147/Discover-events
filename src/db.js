@@ -85,3 +85,38 @@ export const clients =[
     rate: 5
   }
 ]
+
+
+import logo1 from "./icons/secure.svg"
+import logo2 from "./icons/dashboard.svg"
+import logo3 from "./icons/support.svg"
+import logo4 from "./icons/built.svg"
+export const events = [
+  {
+    id: 1,
+    image: logo1,
+    title: "Secure Transactions",
+    description: "All payments are securely processed with trusted financial partners"
+  },
+
+  {
+    id: 2,
+    image: logo2,
+    title: "Real-time Dashboard",
+    description: "Track ticket sles attendee data in real-time"
+  },
+
+  {
+    id: 3,
+    image: logo3,
+    title: "Human Support",
+    description: "Get help from our team whenever you need it"
+  },
+
+  {
+    id: 4,
+    image: logo4,
+    title: "Built for Africa",
+    description: "Optimized for the African market with local payment options"
+  },
+]
