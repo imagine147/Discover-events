@@ -20,23 +20,25 @@ export default function Login() {
           <h3 className="self-start text-[#0D080B] text-xl lg:text-2xl mb-1 font-bold">Welcome back 🙌</h3>
           <p className="text-[#0D080B] text-sm lg:text-base self-start">Please proceed with the email address used to register your account.</p>
 
-          <form action="#" className="w-full mt-1 lg:pr-16">
+          <form id="signin" className="w-full mt-1 lg:pr-16">
             <div className="mb-3">
               <div className="flex flex-col">
-                <label className="text-xs text-[#0D080B] leading-5 flex items-center">Email</label>
-                <input type="text" name="email" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-[#0D080B] text-sm rounded-md outline-none px-2 placeholder:text-sm placeholder:text-[#0D080B]"></input>
+                <label htmlFor="email" className="text-xs text-[#0D080B] leading-5 flex items-center">Email</label>
+                <input type="text" name="email" id="email"  className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-[#0D080B] text-sm rounded-md outline-none px-2 placeholder:text-sm placeholder:text-[#0D080B]" />
               </div>
             </div>
 
             <div className="mb-1">
               <div className="">
-                <label className="text-xs leading-4 text-[#0D080B] font-normal">Password</label>
-                <div className="relative w-full">
+                <label id="password" className="text-xs leading-4 text-[#0D080B] font-normal">Password
+                  <div className="relative w-full">
                 <input type={showPassword ? "text" : "password"} name="password" id="password" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="password" />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center" aria-hidden="true">
                 <GrHide className="w-7 h-7 text-[#767779] cursor-pointer" width={32} height={32} fill="none" onClick={() => setShowPassword(!showPassword)}/>
                 </div>
                 </div>
+                </label>
+                
               </div>
               </div>
               <h4 className="text-xs font-normal text-[#FF9500] cursor-pointer hover:underline">Forget Password</h4>
@@ -46,7 +48,7 @@ export default function Login() {
 
               <div className="cursor-pointer w-full border border-[#0000001f] h-[45px] rounded-r-lg flex items-center justify-center gap-3 mb-3">
                 <Image src={Logo} alt="google-logo" className="w-5 h-5" />
-                <h4 className="text-s text-[#0D080B] font-normal">Sign In with Google</h4>
+                <h4 className="text-sm text-[#0D080B] font-normal">Sign In with Google</h4>
               </div>
               <h4 className="text-sm font-semibold text-[#767779]">Don’t have an account?<span className="text-[#FF9500] font-bold hover:underline cursor-pointer"> Create one</span></h4>
           </form>

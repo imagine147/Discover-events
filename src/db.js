@@ -120,3 +120,35 @@ export const events = [
     description: "Optimized for the African market with local payment options"
   },
 ]
+
+export const category= [
+  {
+    id: 1,
+    title: "Conference"
+  },
+
+  {
+    id: 2,
+    title: "Party"
+  },
+
+  {
+    id: 3,
+    title: "Religious"
+  },
+
+  {
+    id: 4,
+    title: "Comedy"
+  },
+
+  {
+    id: 5,
+    title: "Food Fest"
+  },
+
+  {
+    id: 6,
+    title: "Others"
+  }
+]

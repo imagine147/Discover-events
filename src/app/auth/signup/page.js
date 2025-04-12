@@ -25,34 +25,35 @@ export default function SignUp() {
               </div>
             </div>
 
-            <form action="#" className="w-full mt-1 lg:pr-16 text-[#0D080B]">
+            <form id="signup" className="w-full mt-1 lg:pr-16 text-[#0D080B]">
               <div className="mb-3">
                 <div className="flex flex-col">
-                  <label className="text-xs text-[#0D080B] leading-5 flex items-center">First Name</label>
-                  <input type="text" name="firstName" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
+                  <label htmlFor="firstname" className="text-xs text-[#0D080B] leading-5 flex items-center">First Name</label>
+                  <input type="text" id="firstname" name="firstname" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
                 </div>
               </div>
               <div className="mb-3">
                 <div className="flex flex-col">
-                  <label className="text-xs text-[#0D080B] leading-5 flex items-center">Last Name</label>
-                  <input type="text" name="lastName" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
+                  <label htmlFor="lastname" className="text-xs text-[#0D080B] leading-5 flex items-center">Last Name</label>
+                  <input type="text" id="lastname" name="lastName" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
                 </div>
               </div>
               <div className="mb-3">
                 <div className="flex flex-col">
-                  <label className="text-xs text-[#0D080B] leading-5 flex items-center">Email</label>
-                  <input type="email" name="email" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
+                  <label htmlFor="email" className="text-xs text-[#0D080B] leading-5 flex items-center">Email</label>
+                  <input type="email" id="email" name="email" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
                 </div>
               </div>
               <div className="mb-1">
                 <div className="">
-                  <label className="text-xs leading-4 text-[] font-normal"></label>
+                  <label className="text-xs leading-4 text-[#0D080B] font-normal">
                   <div className="relative w-full">
-                    <input type={showPassword ? "text" : "password"} name="password" id="password" className="block w-full h-[44px] text-[] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="password"/>
+                    <input type={showPassword ? "text" : "password"} name="password" id="password" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="password"/>
                     <div className="absolute inset-y-0 right-0 pr-3 flex items-center" aria-hidden="true">
                       <GrHide className="w-7 h-7 text-[#767779] cursor-pointer" style={{ width: "32px", height: "32px", fill: "none" }} onClick={() => setShowPassword(!showPassword)}/>
                     </div>
                   </div>
+                  </label>
                 </div>
               </div>
               <ul className="flex flex-col gap-1">
@@ -64,13 +65,14 @@ export default function SignUp() {
               </ul>
               <div className="mb-1">
                 <div>
-                <label className="text-xs leading-4 text-[] font-normal">Confirm Password</label>
+                <label htmlFor="confirmPassword" className="text-xs leading-4 text-[] font-normal">Confirm Password
                 <div className="relative w-full">
                   <input type={showPassword ? "text" : "password"} name="confirmPassword" id="confirmPassword" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="Confirm Password"/>
                   <div className="absolute inset-y-0 right-0 pr-3 flex items-center" aria-hidden="true">
                     <GrHide className="w-7 h-7 text-[#767779] cursor-pointer" width={32} height={32} fill="none" onClick={() => setShowPassword(!showPassword)}/>
                   </div>
                 </div>
+                </label>
                 </div>
               </div>
               <button className="flex flex-row gap-2 rounded-md items-center justify-center p-4 h-[39px] md:h-[40px] hover:bg-opacity-90 font-medium leading-5 text-xs md:text-base w-full text-center my-6 border border-[#0d080b] bg-[#A30162] opacity-100 text-white" type="submit">

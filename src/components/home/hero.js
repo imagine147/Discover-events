@@ -25,7 +25,7 @@ export default function Hero() {
             Unlock incredible experiences and create lasting memories — every detail perfected, every moment unforgettable. Your next great event is just a click away!
           </p>
 
-          <div className="flex gap-4 justify-center lg:justify-start">
+          <div className="w-full flex gap-4 justify-center lg:justify-start">
             <button
               type="button"
               className="w-auto py-3 px-4 text-white bg-[#A30162] rounded-md text-sm font-medium outline-none block lg:hidden"
@@ -38,6 +38,13 @@ export default function Hero() {
               className="w-auto py-3 px-4 text-white bg-[#A30162] rounded-md text-sm font-medium outline-none hidden lg:block"
             >
               Discover Events
+            </button>
+
+            <button
+              type="button"
+              className="w-auto py-3 px-4 text-[#A30162] bg-[#F1F5F8] border border-[#A30162] rounded-md text-sm font-medium outline-none hover:opacity-90 block"
+            >
+              Create Event
             </button>
           </div>
 

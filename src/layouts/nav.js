@@ -47,29 +47,29 @@ export default function NavBar() {
           </button>
 
           <nav className="hidden md:flex pl-2 lg:pl-0">
-            <ul className="flex gap-5 lg:gap-10" ref={navRef}>
+            <ul className="flex gap-5 lg:gap-10 text-sm" ref={navRef}>
               <li>
-                <Link href="#about"  onClick={() => { handleSetActive('about'); closeMenubar(); }}>
+                <Link href="#about"  onClick={() => { handleSetActive('about'); closeMenubar(); }} className='text-[#767779] active:text-[#a30162]'>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/events" onClick={() => { handleSetActive('events'); closeMenubar(); }}>
+                <Link href="/event" onClick={() => { handleSetActive('events'); closeMenubar(); }} className='text-[#767779] active:text-[#a30162]'>
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" onClick={() => { handleSetActive('pricing'); closeMenubar(); }}>
+                <Link href="/pricing" onClick={() => { handleSetActive('pricing'); closeMenubar(); }} className='text-[#767779] active:text-[#a30162]'>
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="#faq"  onClick={() => { handleSetActive('faq'); closeMenubar(); }}>
+                <Link href="#faq"  onClick={() => { handleSetActive('faq'); closeMenubar(); }} className='text-[#767779] active:text-[#a30162]'>
                   FAQs
                 </Link>
               </li>
               <li>
-                <Link href="/contact" onClick={() => { handleSetActive('contact'); closeMenubar(); }}>
+                <Link href="/contact" onClick={() => { handleSetActive('contact'); closeMenubar(); }} className='text-[#767779] active:text-[#a30162]'>
                   Contact Us
                 </Link>
               </li>
@@ -77,33 +77,33 @@ export default function NavBar() {
           </nav>
 
           <nav
-            className={`absolute top-full left-0 w-full bg-white shadow-lg p-5 md:hidden flex flex-col gap-4 z-50 ${
+            className={`absolute top-full left-0 w-full bg-white shadow-lg p-5 md:hidden flex flex-col gap-4 z-50 cursor-pointer${
               menuOpen ? 'block opacity-100 w-[280px] right-0' : 'hidden opacity-0 top-[100%]'
             }`}
           >
             <div className="flex flex-col gap-5" ref={navRef}>
               <Link href="#about" onClick={() => { handleSetActive('about'); closeMenubar(); }}>
-                <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
+                <button className="w-full text-base text-start font-medium text-[#767779] active:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   About Us
                 </button>
               </Link>
-              <Link href="/events">
-                <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
+              <Link href="/event"> 
+                <button className="w-full text-base text-start font-medium text-[#767779] active:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   Events
                 </button>
               </Link>
               <Link href="/pricing">
-                <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
+                <button className="w-full text-base text-start font-medium text-[#767779] active:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   Pricing
                 </button>
               </Link>
               <Link href="#faq"  onClick={() => { handleSetActive('faq'); closeMenubar(); }}>
-                <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
+                <button className="w-full text-base text-start font-medium text-[#767779] active:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   FAQs
                 </button>
               </Link>
               <Link href="/contact">
-                <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
+                <button className="w-full text-base text-start font-medium text-[#767779] active:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   Contact Us
                 </button>
               </Link>
