@@ -106,7 +106,7 @@ export default function SignUp() {
                   <span className="text-red-500 text-[12px]">{errors.password.message}</span>
                 )}
                     <div className="absolute inset-y-0 right-0 pr-3 flex items-center" aria-hidden="true">
-                      <GrHide className="w-7 h-7 text-[#767779] cursor-pointer" style={{ width: "32px", height: "32px", fill: "none" }} onClick={() => setShowPassword(!showPassword)}/>
+                      <GrHide className="w-7 h-7 text-[#767779] cursor-pointer" width={32} height={32} fill="none" onClick={() => setShowPassword(!showPassword)}/>
                     </div>
                   </div>
                   </label>

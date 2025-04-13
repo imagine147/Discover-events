@@ -37,6 +37,8 @@ export default function Footer() {
           <ul className="flex flex-col gap-4 cursor-pointer">
             <li><Link href="https://eventcove-africa.gitbook.io/legal/eventcove-privacy-policy" target="_blank" rel="noopener noreferrer"className="hover:text-[#a30162]">Privacy Policy</Link></li>
             <li><Link href="https://eventcove-africa.gitbook.io/legal/eventcove-terms-of-use" target="_blank" rel="noopener noreferrer"className="hover:text-[#a30162]">Terms & Conditions</Link></li>
+            <li><Link href="/auth/signup" target="_blank" rel="noopener noreferrer" className="hover:text-[#a30162]">Create Events</Link></li>
+            <li><Link href="/auth/login" target="_blank" rel="noopener noreferrer" className="hover:text-[#a30162]">Login</Link></li>
           </ul>
         </div>
 
