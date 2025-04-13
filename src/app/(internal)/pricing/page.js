@@ -1,13 +1,10 @@
 import Image from "next/image";
-import Bg from "../../images/pricing_bg.webp"
-import NavBar from "@/layouts/nav";
+import Bg from "../../../images/pricing_bg.webp"
 import Payment from "@/components/payment/payment";
-import Footer from "@/layouts/footer";
 
 export default function Pricing() {
   return (
     <div className="w-full h-full">
-      <NavBar/>
       <div className="bg-[#F1F5F8]">
       <div style={{position: "relative", opacity: 1, transform: "none" }}>
         <div className="w-full container mx-auto px-4 py-3 sm:px-6 lg:px-4">
@@ -22,9 +19,6 @@ export default function Pricing() {
           <Payment/>
         </div>
       </div>
-      </div>
-      <div className="w-full h-full bg-white">
-        <Footer/>
       </div>
     </div>
   )

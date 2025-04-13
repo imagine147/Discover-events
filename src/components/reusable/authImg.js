@@ -16,7 +16,7 @@ export default function AuthImage() {
       animate(".animate-float", { y: [0, -10, 0] }, { duration: 2, repeat: Infinity });
     }, []);
   return (
-    <div className="hidden lg:block flex-1 relative text-black h-screen">
+    <div className="hidden lg:block flex-1 relative text-black h-full">
       <Image src={Auth} alt="auth-img" className='w-full h-full object-cover rounded-xl' loading='lazy'/>
       <div className='w-[220px] min-h-[70px] h-auto rounded-md absolute shadow-lg p-4 bg-white animate-bounce' style={{top: "5rem", left: "-5rem"}}>
         <Image className='mb-2 w-6 h-6' src={Brand} alt="branding-icon"/>

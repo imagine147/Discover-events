@@ -23,30 +23,30 @@ export default function Footer() {
       <div className="w-full lg:w-3/5 flex flex-col md:flex-row gap-6 justify-between">
         <div className="flex flex-col gap-5">
           <h3 className="text-base text-[#0D080B] font-bold">Company</h3>
-          <ul className="flex flex-col gap-4">
-            <li>About Us</li>
-            <li>Events</li>
-            <li>Pricing</li>
-            <li>Contact Us</li>
-            <li>FAQs</li>
+          <ul className="flex flex-col gap-4 cursor-pointer">
+            <li><Link href="#about" className="hover:text-[#a30162]">About Us</Link></li>
+            <li><Link href="/event" className="hover:text-[#a30162]">Events</Link></li>
+            <li><Link href="/pricing" className="hover:text-[#a30162]">Pricing</Link></li>
+            <li><Link href="/contact" className="hover:text-[#a30162]">Contact Us</Link></li>
+            <li><Link href="#faq" className="hover:text-[#a30162]">FAQs</Link></li>
           </ul>
         </div>
 
         <div className="flex flex-col gap-5">
           <h3 className="text-base text-[#0D080B] font-bold">Other Links</h3>
-          <ul className="flex flex-col gap-4">
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
+          <ul className="flex flex-col gap-4 cursor-pointer">
+            <li><Link href="https://eventcove-africa.gitbook.io/legal/eventcove-privacy-policy" target="_blank" rel="noopener noreferrer"className="hover:text-[#a30162]">Privacy Policy</Link></li>
+            <li><Link href="https://eventcove-africa.gitbook.io/legal/eventcove-terms-of-use" target="_blank" rel="noopener noreferrer"className="hover:text-[#a30162]">Terms & Conditions</Link></li>
           </ul>
         </div>
 
         <div className="flex flex-col gap-5">
           <h3 className="text-base text-[#0D080B] font-bold">Connect with us</h3>
-          <ul className="flex flex-col gap-4">
-            <li className="text-sm text-[#0D080B] cursor-pointer flex items-center gap-2"><Image src={Twitter} alt="Twitter-icon"/>X</li>
-            <li className="text-sm text-[#0D080B] cursor-pointer flex items-center gap-2"><Image src={Facebook} alt="Facebook-icon"/>Facebook</li>
-            <li className="text-sm text-[#0D080B] cursor-pointer flex items-center gap-2"><Image src={Instagram} alt="Instagram-icon"/>Instagram</li>
-            <li className="text-sm text-[#0D080B] cursor-pointer flex items-center gap-2"><Image src={Linkedin} alt="LinkedIn-icon"/>LinkedIn</li>
+          <ul className="flex flex-col gap-4 cursor-pointer">
+            <li><Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0D080B] cursor-pointer flex items-center gap-2 hover:text-[#a30162]"><Image src={Twitter} alt="Twitter-icon"/>X</Link></li>
+            <li><Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0D080B] cursor-pointer flex items-center gap-2 hover:text-[#a30162]"><Image src={Facebook} alt="Facebook-icon"/>Facebook</Link></li>
+            <li><Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0D080B] cursor-pointer flex items-center gap-2 hover:text-[#a30162]"><Image src={Instagram} alt="Instagram-icon"/>Instagram</Link></li>
+            <li><Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0D080B] cursor-pointer flex items-center gap-2 hover:text-[#a30162]"><Image src={Linkedin} alt="LinkedIn-icon"/>LinkedIn</Link></li>
           </ul>
         </div>
       </div>

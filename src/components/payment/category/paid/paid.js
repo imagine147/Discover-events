@@ -1,4 +1,5 @@
 import { PiCalendarDotsLight } from "react-icons/pi";
+import Link from "next/link";
 export default function Paid() {
   return (
     <div className="bg-white container mx-auto px-3 md:px-10 py-3 md:py-5 flex flex-col justify-center items-center gap-4 w-full md:w-auto rounded-xl">
@@ -28,9 +29,9 @@ export default function Paid() {
                 <li className="text-[#767779] font-normal text-sm">You receive: ₦4,700</li>
               </ul>
             </div>
-            <button type="button" className="flex flex-row gap-2 rounded-md items-center justify-center p-4 h-[39px] md:h-[40px]  bg-[#A30162] hover:opacity-90 font-medium leading-5 text-xs md:text-base text-center w-full">
+            <Link href="/auth/login" className="w-full" target="_blank" rel="noopener noreferrer"><button type="button" className="flex flex-row gap-2 rounded-md items-center justify-center p-4 h-[39px] md:h-[40px]  bg-[#A30162] hover:opacity-90 font-medium leading-5 text-xs md:text-base text-center w-full">
               <div className="font-medium leading-5 text-base text-white">Get Started</div>
-            </button>
+            </button></Link>
           </div>
   )
 }

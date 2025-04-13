@@ -5,6 +5,7 @@ import Levels from "../../images/hero_img.webp"
 import Chart  from "../../images/hero_chart.svg"
 import Chatr1 from "../../images/hero_chart2.svg"
 import { animate } from 'framer-motion'
+import Link from 'next/link'
 
 
 
@@ -26,26 +27,17 @@ export default function Hero() {
           </p>
 
           <div className="w-full flex gap-4 justify-center lg:justify-start">
-            <button
-              type="button"
-              className="w-auto py-3 px-4 text-white bg-[#A30162] rounded-md text-sm font-medium outline-none block lg:hidden"
-            >
-              Discover Events
-            </button>
+            <Link href="/event" className="block">
+              <button className="w-auto py-3 px-4 text-white bg-[#A30162] border-[#A30162] rounded-md text-sm font-medium outline-none">
+                Discover Events
+              </button>
+            </Link>
 
-            <button
-              type="button"
-              className="w-auto py-3 px-4 text-white bg-[#A30162] rounded-md text-sm font-medium outline-none hidden lg:block"
-            >
-              Discover Events
-            </button>
-
-            <button
-              type="button"
-              className="w-auto py-3 px-4 text-[#A30162] bg-[#F1F5F8] border border-[#A30162] rounded-md text-sm font-medium outline-none hover:opacity-90 block"
-            >
-              Create Event
-            </button>
+            <Link href="/auth/signup">
+              <button className="w-auto py-3 px-4 text-[#A30162] bg-[#F1F5F8] border border-[#A30162] rounded-md text-sm font-medium outline-none hover:opacity-90 block">
+                Create Events
+              </button>
+            </Link>
           </div>
 
           <div className="flex gap-6 justify-center lg:justify-start mt-6">

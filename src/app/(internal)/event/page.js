@@ -1,16 +1,19 @@
+"use client"
+import { useState } from "react"
 import Image from "next/image"
-import Bg from "../../images/events_bg.webp"
-import NavBar from "@/layouts/nav"
-import Footer from "@/layouts/footer"
+import Bg from "../../../images/events_bg.webp"
 import Events from "@/components/events/upcomingEvents"
 import { category } from "@/db"
 import { CiCalendar } from "react-icons/ci";
 import { AiOutlineSearch } from "react-icons/ai";
 import { CiLocationArrow1 } from "react-icons/ci";
+import DatePicker from "react-datepicker"
+import 'react-datepicker/dist/react-datepicker.css';
 export default function Event() {
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <div className="w-full h-full">
-          <NavBar/>
+          
           <div className="bg-[#F1F5F8]">
           <div style={{position: "relative", opacity: 1, transform: "none" }}>
             <div className="w-full container mx-auto px-4 py-3 sm:px-6 lg:px-4">
@@ -34,6 +37,12 @@ export default function Event() {
                     <div className="relative w-full">
                       <div className="border-r border-[#767779] w-full flex items-center gap-1 pl-2 text-[#767779] text-sm cursor-pointer">
                         <CiCalendar className="text-[#767779] w-[16px] h-[16px]" height='1em' width='1em'/>Date
+                        <DatePicker
+                      selected={startDate} 
+                      onChange={(date)=>
+                        setStartDate(date)
+                      }
+                      />
                       </div>
                     </div>
                   </div>
@@ -62,9 +71,6 @@ export default function Event() {
               <Events/>
             </div>
           </div>
-          </div>
-          <div className="w-full h-full bg-white">
-            <Footer/>
           </div>
         </div>
   )

@@ -81,8 +81,8 @@ export default function NavBar() {
               menuOpen ? 'block opacity-100 w-[280px] right-0' : 'hidden opacity-0 top-[100%]'
             }`}
           >
-            <div className="flex flex-col gap-5" ref={navRef}>
-              <Link href="#about" onClick={() => { handleSetActive('about'); closeMenubar(); }}>
+            <div className="flex flex-col gap-5">
+              <Link href="#about">
                 <button className="w-full text-base text-start font-medium text-[#767779] active:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   About Us
                 </button>
@@ -97,7 +97,7 @@ export default function NavBar() {
                   Pricing
                 </button>
               </Link>
-              <Link href="#faq"  onClick={() => { handleSetActive('faq'); closeMenubar(); }}>
+              <Link href="#faq">
                 <button className="w-full text-base text-start font-medium text-[#767779] active:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   FAQs
                 </button>
