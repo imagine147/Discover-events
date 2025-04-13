@@ -7,7 +7,7 @@ import Checked2 from "../../icons/checked.svg"
 export default function About() {
   return (
     <div className="w-full h-full">
-      <div className="container mx-auto w-full px-3 py-4 flex flex-col lg:flex-row justify-around lg:justify-between items-center gap-4 h-full pt-36">
+      <div className="container mx-auto w-full px-3 py-4 flex flex-col lg:flex-row justify-around lg:justify-between items-center gap-4 h-full pt-8 md:pt-16 lg:pt-36">
         <div className="w-full flex flex-col gap-4 text-center lg:text-left">
           <h1 className="font-bold text-base md:text-xl lg:text-2xl text-[#0D080B]">
             Plan. Promote. Sell. <span className="text-[#A30162]">Engage.</span>

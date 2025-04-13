@@ -17,7 +17,7 @@ export default function Home() {
       <div className="bg-[#F1F5F8]">
         <div id="home"><Hero/></div>
         <div id="about"><About/></div>
-        <div id="events"><Events/></div>
+        <div id="event"><Events/></div>
         <div id="why"><WhyUs/></div>
         <div id="review"><CustomersReview/></div>
         <div id="faq"><Faqs/></div>

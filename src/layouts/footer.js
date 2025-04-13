@@ -24,11 +24,11 @@ export default function Footer() {
         <div className="flex flex-col gap-5">
           <h3 className="text-base text-[#0D080B] font-bold">Company</h3>
           <ul className="flex flex-col gap-4 cursor-pointer">
-            <li><Link href="#about" className="hover:text-[#a30162]">About Us</Link></li>
+            <li><Link href="/#about" className="hover:text-[#a30162]">About Us</Link></li>
             <li><Link href="/event" className="hover:text-[#a30162]">Events</Link></li>
             <li><Link href="/pricing" className="hover:text-[#a30162]">Pricing</Link></li>
             <li><Link href="/contact" className="hover:text-[#a30162]">Contact Us</Link></li>
-            <li><Link href="#faq" className="hover:text-[#a30162]">FAQs</Link></li>
+            <li><Link href="/#faq" className="hover:text-[#a30162]">FAQs</Link></li>
           </ul>
         </div>
 

@@ -7,8 +7,6 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoCloseOutline } from 'react-icons/io5';
 
 
-
-
 export default function NavBar() {
   const [activeLink, setActiveLink] = useState('');
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,12 +47,12 @@ export default function NavBar() {
           <nav className="hidden md:flex pl-2 lg:pl-0">
             <ul className="flex gap-5 lg:gap-10 text-sm" ref={navRef}>
               <li>
-                <Link href="#about"  onClick={() => { handleSetActive('about'); closeMenubar(); }} className='text-[#767779] hover:text-[#a30162]'>
+                <Link href="/#about"  onClick={() => { handleSetActive('#about'); closeMenubar(); }} className='text-[#767779] hover:text-[#a30162]'>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/event" onClick={() => { handleSetActive('events'); closeMenubar(); }} className='text-[#767779] hover:text-[#a30162]'>
+                <Link href="/event" onClick={() => { handleSetActive('event'); closeMenubar(); }} className='text-[#767779] hover:text-[#a30162]'>
                   Events
                 </Link>
               </li>
@@ -64,8 +62,8 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <Link href="#faq"  onClick={() => { handleSetActive('faq'); closeMenubar(); }} className='text-[#767779] hover:text-[#a30162]'>
-                  FAQs
+                <Link href="/#faq"  className='text-[#767779] hover:text-[#a30162]'>
+                FAQs
                 </Link>
               </li>
               <li>
@@ -82,7 +80,7 @@ export default function NavBar() {
             }`}
           >
             <div className="flex flex-col gap-5">
-              <Link href="#about">
+              <Link href="/#about">
                 <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   About Us
                 </button>
@@ -97,7 +95,7 @@ export default function NavBar() {
                   Pricing
                 </button>
               </Link>
-              <Link href="#faq">
+              <Link href="/#faq">
                 <button className="w-full text-base text-start font-medium text-[#767779] hover:text-[#a30162] transition-colors border-b border-[#767779] pb-4">
                   FAQs
                 </button>

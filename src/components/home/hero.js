@@ -27,17 +27,13 @@ export default function Hero() {
           </p>
 
           <div className="w-full flex gap-4 justify-center lg:justify-start">
-            <Link href="/event" className="block">
-              <button className="w-auto py-3 px-4 text-white bg-[#A30162] border-[#A30162] rounded-md text-sm font-medium outline-none">
+              <Link href="/event" className="w-auto py-3 px-4 text-white bg-[#A30162] border-[#A30162] rounded-md text-sm font-medium outline-none">
                 Discover Events
-              </button>
-            </Link>
+              </Link>
 
-            <Link href="/auth/signup">
-              <button className="w-auto py-3 px-4 text-[#A30162] bg-[#F1F5F8] border border-[#A30162] rounded-md text-sm font-medium outline-none hover:opacity-90 block">
+              <Link href="/auth/signup" target="_blank" rel="noopener noreferrer" className="w-auto py-3 px-4 text-[#A30162] bg-[#F1F5F8] border border-[#A30162] rounded-md text-sm font-medium outline-none hover:opacity-90 block">
                 Create Events
-              </button>
-            </Link>
+              </Link>
           </div>
 
           <div className="flex gap-6 justify-center lg:justify-start mt-6">

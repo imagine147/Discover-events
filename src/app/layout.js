@@ -10,8 +10,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-      >
+      <head/>
+      <body style={{fontFamily: 'ui-sans-serif'}}>
         {children}
       </body>
     </html>
