@@ -12,7 +12,7 @@ import About from "@/components/about/aboutUs";
 
 export default function Home() {
   return (
-    <div className="font-sans text-gray-800">
+    <div className="font-sans antialiased">
       <NavBar/>
       <div className="bg-[#F1F5F8]">
         <div id="home"><Hero/></div>

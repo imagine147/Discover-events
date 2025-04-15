@@ -5,7 +5,7 @@ import { IoCloseCircle } from "react-icons/io5";
 import Info from "../../icons/info.svg"
 
 export default function ContactModal() {
-  const [isModalOpen, setIsModalOpen] = useState(true);  
+  const [isModalOpen, setIsModalOpen] = useState(true); 
 
 
   return (
