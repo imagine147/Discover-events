@@ -1,30 +1,31 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { reviews } from "@/db";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 export default function RevCard() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const timeoutRef = useRef(null);
 
-  // Slide to the previous review
+  const totalSlides = reviews.length;
+
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
 
-  // Slide to the next review (to the left)
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
   };
 
-  // Auto-slide to the next review (left only)
   useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext(); // Always slide left
-    }, 4000); // Adjust the interval as needed
+    // Auto-slide left every 4 seconds
+    timeoutRef.current = setTimeout(() => {
+      handleNext();
+    }, 4000);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearTimeout(timeoutRef.current);
+  }, [currentSlide]);
 
   return (
     <div className="w-[97%] lg:w-1/2 flex items-center gap-2">
@@ -45,18 +46,21 @@ export default function RevCard() {
       {/* Slider */}
       <div className="w-full overflow-hidden relative">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex transition-transform duration-1000 ease-in-out"
           style={{
             outline: "none",
-            width: `${reviews.length * 100}%`,
-            transform: `translateX(-${currentSlide * (100 / reviews.length)}%)`,
+            width: `${totalSlides * 100}%`,
+            transform: `translateX(-${currentSlide * (100 / totalSlides)}%)`,
           }}
         >
           {reviews.map((review) => (
             <div
               key={review.id}
               className="flex-shrink-0 bg-white rounded-md p-6 flex flex-col justify-center shadow-md gap-8 min-h-[220px] h-[300px] relative"
-              style={{ width: `${100 / reviews.length}%`, display: "inline-block" }}
+              style={{
+                width: `${100 / totalSlides}%`,
+                display: "inline-block",
+              }}
             >
               <div className="w-[72px] h-[72px] overflow-hidden rounded-full shadow-lg mb-2">
                 <Image

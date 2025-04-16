@@ -152,3 +152,53 @@ export const category= [
     title: "Others"
   }
 ]
+
+
+import { CiLocationOn } from "react-icons/ci";
+import { TfiAlarmClock } from "react-icons/tfi";
+import { PiCalendarLight } from "react-icons/pi";
+import Img1 from "./images/bpjt7tk0mtfc4hyb8bgk.webp"
+import Img2 from "./images/lthxarolxrvhsjbqazko.webp"
+export const upcoming =[
+  {
+    id: 1,
+    title: "Sharon's Birthday Picnic",
+    image: Img1,
+    svg1: <CiLocationOn />,
+    location: "Johnson Jakande Tinubu (JJT) Park Lagos",
+    date: "Sat, 23 Aug 2025",
+    svg2: <PiCalendarLight />,
+    time: "2:00pm",
+    svg3:<TfiAlarmClock />
+  },
+
+  {
+    id:2,
+    title: "Food",
+    image: Img2,
+    svg1: <CiLocationOn />,
+    location: "Ck zango road tudun wada kaduna Kaduna",
+    date: "Fri, 18 Apr 2025",
+    svg2: <PiCalendarLight />,
+    time: "1:30pm",
+    svg3:<TfiAlarmClock />
+  },
+]
+
+export const selectState = [
+  { id: 1, name: "Lagos", country: "Nigeria" },
+  { id: 2, name: "Nairobi", country: "Kenya" },
+  { id: 3, name: "Cape Town", country: "South Africa" },
+  { id: 4, name: "Cairo", country: "Egypt" },
+  { id: 5, name: "Accra", country: "Ghana" },
+  { id: 6, name: "Addis Ababa", country: "Ethiopia" },
+  { id: 7, name: "Kampala", country: "Uganda" },
+  { id: 8, name: "Dar es Salaam", country: "Tanzania" },
+  { id: 9, name: "Abuja", country: "Nigeria" },
+  { id: 10, name: "Casablanca", country: "Morocco" },
+  { id: 11, name: "Dakar", country: "Senegal" },
+  { id: 12, name: "Algiers", country: "Algeria" },
+  { id: 13, name: "Tunis", country: "Tunisia" },
+  { id: 14, name: "Luanda", country: "Angola" },
+  { id: 15, name: "Harare", country: "Zimbabwe" },
+];
