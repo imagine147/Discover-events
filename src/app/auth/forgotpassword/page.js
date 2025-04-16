@@ -49,7 +49,7 @@ export default function ForgotPassword() {
               <button className="flex flex-row gap-2 rounded-md items-center justify-center p-4 h-[39px] md:h-[40px] hover:bg-opacity-90 font-medium leading-5 text-xs md:text-base w-full text-center my-6 border border-[#0d080b] bg-[#A30162] opacity-100 text-white" type="submit">
                 <p className="text-base text-white leading-5 font-medium">Submit</p>
               </button>
-              <h4 onClick={handleBack} className="text-sm font-normal text-[#767779] flex gap-1 cursor-pointer"><BsArrowLeft className="w-5 h-5" style={{ width: '20px', height: '20px' }}/>Back to previous</h4>
+              <h4 onClick={handleBack} className="text-sm font-normal flex gap-1 cursor-pointer" style={{color: '#767779'}} ><BsArrowLeft className="w-5 h-5" style={{ width: '20px', height: '20px', color: "#767779" }}/>Back to previous</h4>
           </form>
         </div>
       </div>

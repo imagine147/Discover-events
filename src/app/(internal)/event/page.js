@@ -47,7 +47,7 @@ export default function Event() {
                   <div className="relative w-full">
                     <div className="border-r border-[#767779] w-full flex items-center gap-1 text-[#767779] text-sm cursor-pointer">
                       <CiLocationArrow1
-                        className="text-[#767779] w-[16px] h-[16px]"
+                        className="w-[16px] h-[16px]" style={{color: '#767779'}}
                       />
                       <select
                         value={selectedState}
@@ -71,7 +71,7 @@ export default function Event() {
                   <div className="relative w-full">
                     <div className="border-r border-[#767779] w-full flex items-center gap-1 pl-2 text-[#767779] text-sm cursor-pointer">
                       <CiCalendar
-                        className="text-[#767779] w-[16px] h-[16px]"
+                        className="w-[16px] h-[16px]" style={{color: '#767779'}}
                       />
                       Date
                       <DatePicker
@@ -85,7 +85,7 @@ export default function Event() {
                 <div className="w-full">
                   <div className="pl-2 w-full flex items-center gap-1 text-[#767779] text-sm">
                     <AiOutlineSearch
-                      className="text-[#767779] w-[16px] h-[16px]"
+                      className="w-[16px] h-[16px]" style={{color: '#767779'}}
                     />
                     <input
                       type="text"

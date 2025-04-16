@@ -32,4 +32,13 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 }
-
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        '#767779': '#767779', // Add the custom color
+      },
+    },
+  },
+  plugins: [],
+};

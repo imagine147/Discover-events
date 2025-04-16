@@ -69,7 +69,7 @@ export default function Login() {
                   <span className="text-red-500 text-[12px]">{errors.password.message}</span>
                 )}
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center" aria-hidden="true">
-                <GrHide className="text-[#767779] cursor-pointer" style={{ width: '28px', height: '28px' }} onClick={() => setShowPassword(!showPassword)}/>
+                <GrHide className="cursor-pointer" style={{ width: '28px', height: '28px', color: "#767779" }} onClick={() => setShowPassword(!showPassword)}/>
                 </div>
                 </div>
                 </label>
