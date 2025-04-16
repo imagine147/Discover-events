@@ -24,7 +24,7 @@ export default function NavBar() {
   };
 
   const handleClickOutside = (event) => {
-    if (navRef.current && !navRef.current.contains(event.target)) {
+    if (navRef?.current && !navRef.current.contains(event.target)) {
       closeMenubar();
     }
   };
