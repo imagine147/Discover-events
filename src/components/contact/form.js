@@ -48,7 +48,7 @@ export default function Form() {
   return (
    <>
        <div className="w-full bg-white max-w-2xl mx-auto shadow  border border-[#F1F5F8] rounded-md">
-      <form
+      <form action="" id='contactform'
         onSubmit={handleSubmit(onSubmit)}
         className="px-4 py-4 md:px-6 lg:px-[28px] lg:py-[30px] w-full"
       >
@@ -59,7 +59,12 @@ export default function Form() {
                 Full Name
               </label>
               <input
-                {...register('fullName', { required: 'Full name is required' })}
+                {...register('fullName',{required: 'This field is required',
+                  pattern: {
+                    value: /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
+                    message: "This field is required",
+                  },
+                })} 
                 className={`border p-2 rounded ${errors.fullName ? 'border-red-500' : 'border-[#CFD6D0]'} outline-none text-[14px]`}
                 id='fullname'
                 type="text"

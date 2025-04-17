@@ -28,7 +28,7 @@ export default function ForgotPassword() {
           <h3 className="self-start text-[#0D080B] text-xl lg:text-2xl mb-1 font-bold">FORGET PASSWORD 📨</h3>
           <p className="text-[#0D080B] text-sm lg:text-base self-start">Please provide the email address used to create your account</p>
 
-          <form id="forgotpassword" className="w-full mt-1 lg:pr-16" onSubmit={handleSubmit (onSubmit)}>
+          <form action='' id="forgotpassword" className="w-full mt-1 lg:pr-16" onSubmit={handleSubmit (onSubmit)}>
             <div className="mb-3">
               <div className="flex flex-col">
                 <label htmlFor="email" className="text-xs text-[#0D080B] leading-5 flex items-center">Email</label>

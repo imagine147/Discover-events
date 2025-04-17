@@ -33,7 +33,7 @@ export default function SignUp() {
               </div>
             </div>
 
-            <form id="signup" className="w-full mt-1 lg:pr-16 text-[#0D080B]" onSubmit={handleSubmit (onSubmit)}>
+            <form action='' id="signup" className="w-full mt-1 lg:pr-16 text-[#0D080B]" onSubmit={handleSubmit (onSubmit)}>
               <div className="mb-3">
                 <div className="flex flex-col">
                   <label htmlFor="firstname" className="text-xs text-[#0D080B] leading-5 flex items-center">First Name</label>
