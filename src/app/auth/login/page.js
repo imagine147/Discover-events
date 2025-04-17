@@ -41,7 +41,7 @@ export default function Login() {
                       message: 'Please enter a valid email address',
                     },
                   })}
-                type="text" name="email" id="email"  className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-[#0D080B] text-sm rounded-md outline-none px-2 placeholder:text-sm placeholder:text-[#0D080B]" />
+                type="text" id="email"  className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-[#0D080B] text-sm rounded-md outline-none px-2 placeholder:text-sm placeholder:text-[#0D080B]" />
                 {errors.email && (
                   <span className="text-red-500 text-[12px]">{errors.email.message}</span>
                 )}
@@ -64,12 +64,12 @@ export default function Login() {
                         message: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character',
                       },
                     })}
-                type={showPassword ? "text" : "password"} name="password" id="password" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="password" />
+                type={showPassword ? "text" : "password"} id="password" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="password" />
                 {errors.password && (
                   <span className="text-red-500 text-[12px]">{errors.password.message}</span>
                 )}
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center" aria-hidden="true">
-                <GrHide className="cursor-pointer" size={24} style={{color: "#767779" }} onClick={() => setShowPassword(!showPassword)}/>
+                <GrHide className="cursor-pointer" size={24} style={{color: "#767779" }} fill="none" onClick={() => setShowPassword(!showPassword)}/>
                 </div>
                 </div>
                 </label>

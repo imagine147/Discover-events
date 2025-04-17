@@ -10,7 +10,7 @@ import { MdOutlineCancel } from "react-icons/md";
 import Logo from "../../../icons/google-Xto8FEj0.svg"
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
-    const { register, handleSubmit, watch, formState: { errors,}} = useForm()
+    const { register, handleSubmit, watch, formState: { errors,}} = useForm();
     const onSubmit = (data) => {
       // TODO: Send the form data to the server
       console.log(data)
@@ -34,23 +34,30 @@ export default function SignUp() {
             </div>
 
             <form action='' id="signup" className="w-full mt-1 lg:pr-16 text-[#0D080B]" onSubmit={handleSubmit (onSubmit)}>
-              <div className="mb-3">
-                <div className="flex flex-col">
-                  <label htmlFor="firstname" className="text-xs text-[#0D080B] leading-5 flex items-center">First Name</label>
-                  <input 
-                  {...register('firstName', {
-                    required: 'Firstname is required',
-                    pattern: {
-                      value: /^[a-zA-Z]+(?:(?:|['_\. ])([a-zA-Z]*(\.\s)?[a-zA-Z])+)*$/,
-                      message: 'Please enter a valid first name',
-                    },
-                  })}
-                  type="text" id="firstname" name="firstName" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
-                  {errors.firstName && (
-                  <span className="text-red-500 text-[12px]">{errors.firstName.message}</span>
-                )}
-                </div>
-              </div>
+            <div className="mb-3">
+  <div className="flex flex-col">
+    <label htmlFor="firstname" className="text-xs text-[#0D080B] leading-5 flex items-center">
+      First Name
+    </label>
+    <input
+      {...register('firstName', {
+        required: 'Firstname is required',
+        pattern: {
+          value: /^[a-zA-Z\s'-]+$/,
+          message: 'Please enter a valid first name',
+        },
+      })}
+      type="text"
+      id="firstname"
+      placeholder=""
+      className="h-[44px] w-full bg-white border border-[#0000001f] text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm"
+    />
+    {errors.firstName && (
+      <span className="text-red-500 text-[12px]">{errors.firstName.message}</span>
+    )}
+  </div>
+</div>
+
               <div className="mb-3">
                 <div className="flex flex-col">
                   <label htmlFor="lastname" className="text-xs text-[#0D080B] leading-5 flex items-center">Last Name</label>
@@ -58,11 +65,11 @@ export default function SignUp() {
                   {...register('lastName', {
                     required: 'Lastname is required',
                     pattern: {
-                      value: /^[a-zA-Z]+(?:(?:|['_\. ])([a-zA-Z]*(\.\s)?[a-zA-Z])+)*$/,
+                      value: /^[a-zA-Z\s'-]+$/,
                       message: 'Please enter a valid last name',
                     },
                   })}
-                  type="text" id="lastname" name="lastName" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
+                  type="text" id="lastname" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
                   {errors.lastName && (
                   <span className="text-red-500 text-[12px]">{errors.lastName.message}</span>
                 )}
@@ -79,7 +86,7 @@ export default function SignUp() {
                       message: 'Please enter a valid email address',
                     },
                   })}
-                  type="email" id="email" name="email" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
+                  type="email" id="email"  placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
                   {errors.email && (
                   <span className="text-red-500 text-[12px]">{errors.email.message}</span>
                 )}
@@ -101,7 +108,7 @@ export default function SignUp() {
                         message: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character',
                       },
                     })}
-                    type={showPassword ? "text" : "password"} name="password" id="password" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="password"/>
+                    type={showPassword ? "text" : "password"} id="password" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="password"/>
                     {errors.password && (
                   <span className="text-red-500 text-[12px]">{errors.password.message}</span>
                 )}
@@ -121,14 +128,14 @@ export default function SignUp() {
               </ul>
               <div className="mb-1">
                 <div>
-                <label htmlFor="confirmPassword" className="text-xs leading-4 text-[] font-normal">Confirm Password
+                <label htmlFor="confirmPassword" className="text-xs leading-4 text-[#0D080B] font-normal">Confirm Password
                 <div className="relative w-full">
                   <input 
                   {...register('confirmPassword', {
                       required: 'Confirm password is required',
                       validate: (value) => value === watch('password') || 'Passwords do not match',
                     })}
-                  type={showPassword ? "text" : "password"} name="confirmPassword" id="confirmPassword" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="Confirm Password"/>
+                  type={showPassword ? "text" : "password"} id="confirmPassword" className="block w-full h-[44px] text-[#0D080B] text-sm px-2 border border-[#0000001f] rounded-lg outline-none" placeholder="" aria-label="Confirm Password"/>
                   {errors.confirmPassword && (
                   <span className="text-red-500 text-[12px]">{errors.confirmPassword.message}</span>
                 )}

@@ -40,7 +40,7 @@ export default function ForgotPassword() {
                       message: 'Please enter a valid email address',
                     },
                   })}
-                type="text" name="email" id="email"  className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-[#0D080B] text-sm rounded-md outline-none px-2 placeholder:text-sm placeholder:text-[#0D080B]" />
+                type="text" id="email"  className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-[#0D080B] text-sm rounded-md outline-none px-2 placeholder:text-sm placeholder:text-[#0D080B]" />
                 {errors.email && (
                   <span className="text-red-500 text-[12px]">{errors.email.message}</span>
                 )}
