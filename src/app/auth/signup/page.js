@@ -45,7 +45,7 @@ export default function SignUp() {
                       message: 'Please enter a valid first name',
                     },
                   })}
-                  type="text" id="firstname" name="firstname" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
+                  type="text" id="firstname" name="firstName" placeholder="" className="h-[44px] w-full bg-white border border-[#0000001f] accent-auto text-sm rounded-md outline-none px-2 placeholder:text-[#0D080B] placeholder:text-sm" />
                   {errors.firstName && (
                   <span className="text-red-500 text-[12px]">{errors.firstName.message}</span>
                 )}
